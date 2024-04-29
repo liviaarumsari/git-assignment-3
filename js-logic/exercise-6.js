@@ -1,11 +1,8 @@
 function gcd(firstNumber, secondNumber) {
-    let gcd = 1;
-    for (let i = 0; i <= Math.min(firstNumber, secondNumber); i++) {
-        if (firstNumber % i === 0 && secondNumber % i === 0){
-            gcd = i;
-        }
+    if (secondNumber == 0) {
+        return firstNumber;
     }
-    return gcd;
+    return gcd(secondNumber, firstNumber % secondNumber);
 }
 
 // TEST CASES
